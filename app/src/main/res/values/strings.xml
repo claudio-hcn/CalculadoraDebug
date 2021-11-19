@@ -7,5 +7,6 @@
     <string name="nro1">Ingrese el primer número</string>
     <string name="nro2">Ingrese el segundo número</string>
     <string name="resultado">Resultado</string>
+    <string name="excepcion">Ingrese ambos numeros para realizar la operación</string>
 
 </resources>

@@ -6,91 +6,91 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/nro1"
-        android:layout_width="244dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginBottom="42dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/nro2"
+    <LinearLayout
+        android:layout_width="359dp"
+        android:layout_height="624dp"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:hint="@string/nro1" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/nro2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="36dp"
-        android:ems="10"
-        android:hint="@string/nro2"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/tableRow"
-        app:layout_constraintEnd_toEndOf="@+id/nro1"
-        app:layout_constraintStart_toStartOf="@+id/tableRow"
-        app:layout_constraintTop_toBottomOf="@+id/nro1" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="20dp" />
 
-    <TableRow
-        android:id="@+id/tableRow"
-        android:layout_width="326dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="56dp"
-        app:layout_constraintBottom_toTopOf="@+id/resultado"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nro2">
+        <EditText
+            android:id="@+id/nro1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:textSize="20dp"
+            android:ems="10"
+            android:hint="@string/nro1"
+            android:inputType="number" />
 
-        <Button
-            android:id="@+id/btnSuma"
-            android:layout_width="74dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:onClick="sumar"
-            android:text="@string/btnSuma"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:textSize="20" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="20dp" />
 
-        <Button
-            android:id="@+id/btnResta"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:onClick="restar"
-            android:text="@string/btnResta"
-            tools:textSize="20sp" />
+        <EditText
+            android:id="@+id/nro2"
+            android:layout_width="match_parent"
+            android:textSize="20dp"
+            android:layout_height="80dp"
+            android:ems="10"
+            android:hint="@string/nro2"
+            android:inputType="number" />
 
-        <Button
-            android:id="@+id/btnMult"
-            android:layout_width="67dp"
-            android:layout_height="wrap_content"
-            android:onClick="multiplicar"
-            android:text="@string/btnMult"
-            tools:textSize="20" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
 
-        <Button
-            android:id="@+id/btnDiv"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:onClick="dividir"
-            android:text="@string/btnDiv"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:textSize="20" />
-    </TableRow>
+        <TextView
+            android:id="@+id/resultado"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:text="" />
 
-    <TextView
-        android:id="@+id/resultado"
-        android:layout_width="256dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="360dp"
-        android:hint="@string/resultado"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="sumar"
+                android:text="+"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="restar"
+                android:text="-"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="multiplicar"
+                android:text="X"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="dividir"
+                android:text="/"
+                android:textSize="30dp" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
